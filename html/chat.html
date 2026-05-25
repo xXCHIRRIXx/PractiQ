@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat PractiQ</title>
+    <link rel="stylesheet" href="/css/chat.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    <div class="chat-container">
+        <aside class="sidebar">
+            <h2>Tus Contactos</h2>
+            <div id="lista-contactos">
+                </div>
+        </aside>
+
+        <main class="chat-main">
+            <header class="chat-header">
+                <h3 id="chat-title">Selecciona un chat</h3>
+            </header>
+            
+            <div id="mensajes-container" class="mensajes-area">
+                </div>
+
+            <form id="form-enviar" class="input-area">
+                <input type="text" id="input-mensaje" placeholder="Escribe un mensaje..." required autocomplete="off">
+                <button type="submit"><i class='bx bx-send'></i></button>
+            </form>
+        </main>
+    </div>
+
+    <script type="module">
+        // Importación de Firebase desde CDN
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js';
+        
+        // El script principal de tu lógica
+        import '/js/chat.js';
+    </script>
+</body>
+</html>

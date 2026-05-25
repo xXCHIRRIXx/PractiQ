@@ -1,0 +1,30 @@
+/* Estilos Base */
+body { background: #f8fafc; font-family: 'Inter', sans-serif; margin: 0; }
+.container { max-width: 900px; margin: 40px auto; padding: 20px; }
+
+/* Tarjetas */
+.card-tarea {
+    background: white; padding: 25px; border-radius: 20px;
+    margin-bottom: 20px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, border-left 0.3s ease;
+    border-left: 8px solid #ccc;
+    animation: slideIn 0.5s ease forwards;
+}
+.card-tarea:hover { transform: scale(1.02); }
+
+/* Estados */
+.card-tarea.hecha { border-left-color: #10b981; }
+.card-tarea.pendiente { border-left-color: #f59e0b; }
+
+.status-tag {
+    font-size: 0.75rem; font-weight: bold; padding: 4px 10px;
+    border-radius: 20px; background: #eee;
+}
+
+@keyframes slideIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+/* Botón Volver */
+.btn-top-back { 
+    background: #fff; border: 1px solid #e2e8f0; padding: 10px 20px; 
+    border-radius: 12px; cursor: pointer; display: flex; align-items: center; gap: 8px;
+}

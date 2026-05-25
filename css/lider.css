@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --leader-dark: #0F172A;
+    --leader-primary: #6366F1;
+    --bg-color: #F8FAFC;
+    --text-dark: #334155;
+    --text-light: #64748B;
+    --card-bg: #FFFFFF;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+body { background-color: var(--bg-color); color: var(--text-dark); min-height: 100vh; display: flex; flex-direction: column; }
+
+header {
+    background: var(--card-bg); padding: 15px 40px;
+    box-shadow: 0 4px 15px rgba(15, 23, 42, 0.03); display: flex;
+    justify-content: space-between; align-items: center;
+    position: sticky; top: 0; z-index: 100;
+    border-bottom: 1px solid #E2E8F0;
+}
+.logo { font-size: 22px; font-weight: 800; color: var(--leader-dark); text-decoration: none; }
+.logo span { color: var(--leader-primary); font-weight: 400; font-size: 15px; }
+
+.user-menu { display: flex; align-items: center; gap: 20px; }
+#user-email { font-size: 14px; font-weight: 600; color: var(--text-dark); background: #F1F5F9; padding: 6px 12px; border-radius: 20px; }
+.logout-btn {
+    background: #FFF1F2; color: #E11D48; border: none; padding: 8px 16px;
+    border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.3s;
+    display: flex; align-items: center; gap: 5px;
+}
+.logout-btn:hover { background: #FFE4E6; transform: translateY(-2px); }
+
+main { padding: 40px; max-width: 1200px; margin: 0 auto; width: 100%; flex: 1; }
+.welcome-section { margin-bottom: 45px; }
+.welcome-section h1 { font-size: 34px; color: var(--leader-dark); margin-bottom: 8px; letter-spacing: -0.5px; }
+.welcome-section p { color: var(--text-light); font-size: 16px; max-width: 700px; }
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: var(--card-bg); padding: 30px; border-radius: 16px;
+    border: 1px solid #E2E8F0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer;
+}
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.08);
+    border-color: var(--leader-primary);
+}
+
+.card-icon {
+    width: 55px; height: 55px; border-radius: 12px;
+    display: flex; justify-content: center; align-items: center;
+    font-size: 28px; margin-bottom: 20px; transition: transform 0.3s;
+}
+.card:hover .card-icon { transform: scale(1.15) rotate(-3deg); }
+
+.card h3 { font-size: 19px; margin-bottom: 10px; color: var(--leader-dark); font-weight: 600; }
+.card p { color: var(--text-light); font-size: 14px; line-height: 1.6; }
+
+/* FAB Líder con Badge */
+.fab {
+    position: fixed; bottom: 40px; right: 40px;
+    width: 65px; height: 65px; border-radius: 50%;
+    background: var(--leader-dark); color: white; border: none;
+    font-size: 30px; display: flex; justify-content: center; align-items: center;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.3); cursor: pointer;
+    transition: all 0.3s ease; z-index: 1000;
+    animation: bounceFloat 3s infinite ease-in-out;
+}
+.fab:hover { background: var(--leader-primary); transform: scale(1.08); }
+.badge {
+    position: absolute; top: 15px; right: 15px; width: 12px; height: 12px;
+    background: #10B981; border-radius: 50%; border: 2px solid var(--leader-dark);
+}
+
+@keyframes bounceFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+.fade-in { animation: slideUp 0.5s ease forwards; opacity: 0; transform: translateY(20px); }
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.15s; }
+.delay-3 { animation-delay: 0.2s; }
+.delay-4 { animation-delay: 0.25s; }
+.delay-5 { animation-delay: 0.3s; }
+.delay-6 { animation-delay: 0.35s; }
+
+@keyframes slideUp { to { opacity: 1; transform: translateY(0); } }
+
+/* Estas clases ya las tienes en tu lider.css, asegúrate de que estén presentes */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.card {
+    background: var(--card-bg); 
+    padding: 30px; 
+    border-radius: 16px;
+    border: 1px solid #E2E8F0; 
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);
+    text-align: center;
+}
+
+.card-icon {
+    width: 55px; height: 55px; border-radius: 12px;
+    margin: 0 auto 20px auto;
+    display: flex; justify-content: center; align-items: center;
+    font-size: 28px;
+}

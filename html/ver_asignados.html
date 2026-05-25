@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practicantes Asignados | PractiQ</title>
+    
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../css/ver_asignados.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <a href="../html/admin.html" class="logo">PractiQ <span>| Administrador Global</span></a>
+        <div class="user-menu">
+            <span id="user-email">Cargando perfil...</span>
+            <button id="btn-logout" class="logout-btn">
+                <i class='bx bx-log-out'></i> Salir
+            </button>
+        </div>
+    </header>
+
+    <main class="gestor-container">
+        
+        <div class="header-section">
+            <button class="btn-back" onclick="window.retroceder()">
+                <i class='bx bx-arrow-back'></i> Volver
+            </button>
+            <h1>Asignaciones Registradas</h1>
+            <p>Listado detallado de practicantes con su respectivo líder asignado.</p>
+        </div>
+
+        <div class="controls">
+            <input type="text" id="buscador" placeholder="🔍 Buscar practicante por nombre...">
+            <div class="sort-buttons">
+                <button class="btn-control" onclick="window.ordenar('asc')">A-Z</button>
+                <button class="btn-control" onclick="window.ordenar('desc')">Z-A</button>
+            </div>
+        </div>
+
+        <div id="lista-gestion" class="fade-in">
+            <p style="text-align:center; padding: 2rem; color: #64748b;">
+                <i class='bx bx-loader-alt bx-spin'></i> Cargando asignaciones...
+            </p>
+        </div>
+
+    </main>
+
+    <script type="module" src="../js/ver_asignados.js"></script>
+
+</body>
+</html>

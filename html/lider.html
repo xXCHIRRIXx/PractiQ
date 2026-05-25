@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Líder - PractiQ</title>
+    <link rel="stylesheet" href="/css/lider.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">PractiQ <span>| Líder de Calidad</span></a>
+        <div class="user-menu">
+            <span id="user-email">Cargando líder...</span>
+            <button id="btn-logout" class="logout-btn"><i class='bx bx-log-out'></i> Salir</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="welcome-section">
+            <h1 class="fade-in">Panel de Gestión de Calidad</h1>
+            <p class="fade-in delay-1">Monitorea el progreso de los practicantes, gestiona tareas y mitiga incidentes en tiempo real.</p>
+        </div>
+
+        <div class="dashboard-grid">
+            <div class="card fade-in delay-2" id="card-dashboard">
+                <div class="card-icon" style="background: rgba(79, 70, 229, 0.1); color: #4F46E5;"><i class='bx bx-grid-alt'></i></div>
+                <h3>Dashboard General</h3>
+                <p>Visualiza estadísticas globales, métricas de rendimiento y estado del proyecto.</p>
+            </div>
+
+            <div class="card fade-in delay-3" id="card-asignar">
+                <div class="card-icon" style="background: rgba(16, 185, 129, 0.1); color: #10B981;"><i class='bx bx-list-plus'></i></div>
+                <h3>Asignar Tarea</h3>
+                <p>Crea nuevas asignaciones detalladas y desígnalas a tus practicantes.</p>
+            </div>
+
+            <div class="card fade-in delay-4" id="card-practicantes">
+                <div class="card-icon" style="background: rgba(59, 130, 246, 0.1); color: #3B82F6;"><i class='bx bx-group'></i></div>
+                <h3>Ver Practicantes</h3>
+                <p>Administra tu equipo, revisa sus enfoques y haz seguimiento personalizado.</p>
+            </div>
+
+            <div class="card fade-in delay-5" id="card-sin-resolver">
+                <div class="card-icon" style="background: rgba(245, 158, 11, 0.1); color: #F59E0B;"><i class='bx bx-time-five'></i></div>
+                <h3>Tareas Sin Resolver</h3>
+                <p>Revisa las entregas pendientes, tareas retrasadas o elementos bajo revisión.</p>
+            </div>
+
+            <div class="card fade-in delay-6" id="card-incidente-lider">
+                <div class="card-icon" style="background: rgba(239, 68, 68, 0.1); color: #EF4444;"><i class='bx bx-error'></i></div>
+                <h3>Reportar Incidente</h3>
+                <p>Registra fallas críticas de la plataforma o novedades de fuerza mayor.</p>
+            </div>
+        </div>
+    </main>
+
+    <button class="fab" id="btn-chat-lider" title="Bandeja de Entrada de Chat">
+        <i class='bx bx-message-rounded-dots'></i>
+        <span class="badge"></span>
+    </button>
+
+    <script type="module" src="/js/lider.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Practicante | PractiQ</title>
+    <link rel="stylesheet" href="../css/practicante.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">PractiQ <span>| Practicante</span></a>
+        <div class="user-menu">
+            <span id="user-email">Cargando...</span>
+            <button id="btn-logout" class="logout-btn"><i class='bx bx-log-out'></i> Salir</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="welcome-section">
+            <h1 class="fade-in">Bienvenido al Panel de Control</h1>
+            <p class="fade-in delay-1">Gestiona tus actividades, reporta novedades y mantente al día con tu gestión.</p>
+        </div>
+
+        <div class="dashboard-grid">
+            <div class="card fade-in delay-2" id="card-tareas">
+                <div class="card-icon"><i class='bx bx-task'></i></div>
+                <h3>Ver Mis Tareas</h3>
+                <p>Consulta tus actividades asignadas.</p>
+            </div>
+
+            <div class="card fade-in delay-3" id="card-control">
+                <div class="card-icon"><i class='bx bx-check-square'></i></div>
+                <h3>Control de Tareas</h3>
+                <p>Gestiona el progreso de tus tareas.</p>
+            </div>
+
+            <div class="card fade-in delay-4" id="card-incidente">
+                <div class="card-icon"><i class='bx bx-error-circle'></i></div>
+                <h3>Reportar Incidente</h3>
+                <p>Notifica cualquier inconveniente.</p>
+            </div>
+
+            <div class="card fade-in delay-5" id="btn-chat">
+                <div class="card-icon"><i class='bx bx-chat'></i></div>
+                <h3>Chat</h3>
+                <p>Comunícate con tu líder.</p>
+            </div>
+        </div>
+    </main>
+
+    <script type="module" src="../js/practicante.js"></script>
+</body>
+</html>

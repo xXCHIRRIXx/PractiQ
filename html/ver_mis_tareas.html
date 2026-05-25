@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Tareas | PractiQ</title>
+    <link rel="stylesheet" href="../css/ver_mis_tareas.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    <header>
+        <a href="practicante.html" class="logo">PractiQ <span>| Mis Tareas</span></a>
+        <div class="user-menu"><span id="user-email"></span></div>
+    </header>
+
+    <main class="container">
+        <button onclick="window.location.href='practicante.html'" class="btn-top-back">
+            <i class='bx bx-arrow-back'></i> Volver al Inicio
+        </button>
+
+        <h2 class="section-title">Tareas Asignadas</h2>
+        
+        <div id="lista-tareas" class="grid-tareas">
+            <p style="text-align: center; color: #666; margin-top: 50px;">Cargando tus tareas...</p>
+        </div>
+    </main>
+
+    <script type="module" src="../js/ver_mis_tareas.js"></script>
+</body>
+</html>

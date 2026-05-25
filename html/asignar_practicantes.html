@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asignar Tarea | PractiQ</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../css/mis_practicantes.css">
+    <style>
+        .form-group { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1rem; }
+        input, select, textarea { padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem; }
+        .btn-submit { 
+            background: #4f46e5; color: white; border: none; padding: 14px; 
+            border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 1rem;
+            margin-top: 1rem; transition: background 0.3s;
+        }
+        .btn-submit:hover { background: #4338ca; }
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <a href="lider.html" class="logo">PractiQ <span>| Nueva Tarea</span></a>
+    </header>
+
+    <main class="gestor-container">
+        <button class="btn-back" onclick="window.history.back()">
+            <i class='bx bx-arrow-back'></i> Volver
+        </button>
+
+        <div class="card" style="display: block;">
+            <h2>Detalles de la Asignación</h2>
+            
+            <div class="form-group">
+                <label>Seleccionar Practicante:</label>
+                <select id="select-practicante">
+                    <option value="">Cargando practicantes...</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Título de la tarea:</label>
+                <input type="text" id="titulo-tarea" placeholder="Ej: Reporte mensual de ventas">
+            </div>
+
+            <div class="form-group">
+                <label>Descripción:</label>
+                <textarea id="desc-tarea" placeholder="Describe los requisitos y objetivos..." style="height: 120px;"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Fecha Límite:</label>
+                <input type="date" id="fecha-limite">
+            </div>
+            
+            <button id="btn-enviar-tarea" class="btn-submit">Asignar Tarea</button>
+        </div>
+    </main>
+
+    <script type="module" src="../js/asignar_tarea.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary: #4F46E5;
+    --bg-color: #F3F4F6;
+    --text-dark: #1F2937;
+    --text-light: #4B5563;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+
+body { display: flex; flex-direction: column; min-height: 100vh; background-color: var(--bg-color); color: var(--text-dark); }
+
+header { background: white; padding: 15px 40px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 10;}
+.logo { font-size: 24px; font-weight: 700; color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 8px;}
+.logo span { color: var(--text-dark); font-weight: 300; font-size: 16px; }
+
+footer { text-align: center; padding: 20px; background: white; color: var(--text-light); font-size: 14px; margin-top: auto; border-top: 1px solid #E5E7EB; }
+
+main { flex: 1; padding: 40px 20px; }
+
+.terms-card {
+    background: white; padding: 50px; border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+    width: 100%; max-width: 800px; margin: 0 auto;
+    animation: slideUp 0.6s ease-out;
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h1 { color: var(--primary); margin-bottom: 10px; font-size: 32px; }
+.last-updated { color: var(--text-light); font-size: 14px; margin-bottom: 40px; border-bottom: 2px solid #F3F4F6; padding-bottom: 20px; }
+
+h3 { color: var(--text-dark); margin-top: 30px; margin-bottom: 15px; font-size: 20px; }
+p, ul { color: var(--text-light); line-height: 1.8; margin-bottom: 20px; text-align: justify; }
+ul { padding-left: 20px; }
+li { margin-bottom: 10px; }
+
+.back-btn {
+    display: inline-flex; align-items: center; gap: 8px; margin-top: 40px;
+    padding: 12px 24px; background: #E5E7EB; color: var(--text-dark);
+    text-decoration: none; border-radius: 10px; font-weight: 600; transition: all 0.3s ease;
+}
+.back-btn:hover { background: #D1D5DB; transform: translateX(-5px); }

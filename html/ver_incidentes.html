@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Incidentes Reportados | PractiQ</title>
+    <link rel="stylesheet" href="/css/ver_incidentes.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header>
+        <a href="admin.html" class="logo">PractiQ <span>| Incidentes</span></a>
+        <div class="user-menu"><span id="user-email"></span></div>
+    </header>
+
+    <main class="container">
+        <button onclick="window.location.href='admin.html'" class="btn-top-back">
+            <i class='bx bx-arrow-back'></i> Volver al panel
+        </button>
+        <h2 class="section-title">Reportes Recibidos</h2>
+        <div id="lista-incidentes">Cargando reportes...</div>
+    </main>
+
+    <script type="module" src="/js/ver_incidentes.js"></script>
+</body>
+</html>

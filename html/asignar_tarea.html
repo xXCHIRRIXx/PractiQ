@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asignar Tarea | PractiQ</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../css/mis_practicantes.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <a href="lider.html" class="logo">PractiQ <span>| Asignar Tareas</span></a>
+    </header>
+
+    <main class="gestor-container">
+        <button class="btn-back" onclick="window.history.back()">
+            <i class='bx bx-arrow-back'></i> Volver
+        </button>
+
+        <div class="card" style="display: block;">
+            <h2>Nueva Tarea</h2>
+            <div style="display: flex; flex-direction: column; gap: 1rem;">
+                <label>Seleccionar Practicante:</label>
+                <select id="select-practicante" style="padding: 10px; border-radius: 6px; border: 1px solid #ccc;">
+                    <option value="">Cargando practicantes...</option>
+                </select>
+
+                <input type="text" id="titulo-tarea" placeholder="Título de la tarea" style="padding: 10px; border-radius: 6px; border: 1px solid #ccc;">
+                
+                <textarea id="desc-tarea" placeholder="Descripción detallada..." style="padding: 10px; border-radius: 6px; border: 1px solid #ccc; height: 100px;"></textarea>
+                
+                <label>Fecha Límite:</label>
+                <input type="date" id="fecha-limite" style="padding: 10px; border-radius: 6px; border: 1px solid #ccc;">
+                
+                <button id="btn-enviar-tarea" style="background: #4f46e5; color: white; border: none; padding: 12px; border-radius: 6px; cursor: pointer; font-weight: bold;">
+                    Asignar Tarea
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <script type="module" src="../js/asignar_tarea.js"></script>
+</body>
+</html>

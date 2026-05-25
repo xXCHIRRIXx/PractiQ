@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - PractiQ</title>
+    <link rel="stylesheet" href="/css/register.css">
+</head>
+<body>
+
+    <header>
+        <a href="/html/login.html" class="logo">PractiQ <span>| Control de Calidad</span></a>
+    </header>
+
+    <main>
+        <div class="card">
+            <h2>Crear Cuenta</h2>
+            <p class="subtitle">Selecciona tu rol en el sistema</p>
+
+            <div class="role-selector">
+                <input type="radio" id="rol-practicante" name="rol" value="practicante" checked>
+                <label for="rol-practicante">Practicante</label>
+                
+                <input type="radio" id="rol-lider" name="rol" value="lider">
+                <label for="rol-lider">Líder de Calidad</label>
+            </div>
+
+            <form id="register-form">
+                <div class="input-group">
+                    <label for="nombre">Nombre Completo</label>
+                    <input type="text" id="nombre" placeholder="Ej. Juan Pérez" required>
+                </div>
+
+                <div class="dynamic-wrapper" id="dynamic-wrapper">
+                    <div class="dynamic-inner">
+                        <div class="input-group">
+                            <label id="dynamic-label" for="dinamico">Enfoque (Área de práctica)</label>
+                            <input type="text" id="dinamico" placeholder="Ej. Desarrollo, Testing, Diseño UX..." required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="correo">Correo Electrónico Corporativo</label>
+                    <input type="email" id="correo" placeholder="tu@empresa.com" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Contraseña (Mínimo 6 caracteres)</label>
+                    <input type="password" id="password" placeholder="Mínimo 6 caracteres" minlength="6" required>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="terminos" required>
+                    <label for="terminos">He leído y acepto los <a href="/html/terminos.html" target="_blank">Términos y Condiciones</a>.</label>
+                </div>
+
+                <button type="submit" class="btn" id="btn-submit">Registrar Practicante</button>
+            </form>
+            
+            <div class="links">
+                <p>¿Ya tienes cuenta? <a href="/html/login.html">Inicia Sesión</a></p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 PractiQ. Todos los derechos reservados.</p>
+    </footer>
+
+    <script type="module" src="/js/register.js"></script>
+</body>
+</html>

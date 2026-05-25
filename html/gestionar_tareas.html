@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Tareas Premium | PractiQ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/gestionar_tareas.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    <header>
+        <a href="lider.html" class="logo">PractiQ <span>| Gestión de Calidad</span></a>
+        <div class="user-menu">
+            <span id="user-email">Cargando...</span>
+            <div class="user-icon"><i class='bx bxs-user-circle'></i></div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="top-bar">
+            <button onclick="window.history.back()" class="btn-back">
+                <i class='bx bx-chevron-left'></i> Volver al Panel
+            </button>
+            <div class="stats-mini">
+                <span id="total-tareas">0</span> Tareas en total
+            </div>
+        </div>
+
+        <section class="content-header">
+            <h1 class="fade-in">Control de Asignaciones</h1>
+            <p class="fade-in delay-1">Monitorea el cumplimiento y desempeño de tus practicantes en tiempo real.</p>
+        </section>
+
+        <div id="lista-tareas-lider" class="tasks-grid">
+            <div class="loader-container">
+                <i class='bx bx-loader-alt bx-spin'></i>
+                <p>Sincronizando con la nube...</p>
+            </div>
+        </div>
+    </main>
+
+    <script type="module" src="../js/gestionar_tareas.js"></script>
+</body>
+</html>

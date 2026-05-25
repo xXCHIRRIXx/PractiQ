@@ -1,0 +1,63 @@
+/* Importación de fuente moderna */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+
+body { 
+    background-color: #f8fafc; 
+    font-family: 'Inter', sans-serif; 
+    margin: 0; 
+    color: #334155;
+}
+
+/* Header Consistente */
+header { 
+    display: flex; justify-content: space-between; align-items: center; 
+    padding: 20px 8%; background: #ffffff; 
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.logo { font-weight: 800; font-size: 1.5rem; color: #4f46e5; text-decoration: none; }
+.logo span { font-weight: 300; color: #94a3b8; }
+
+/* Contenedor Principal */
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+
+.section-title { font-size: 1.8rem; margin-bottom: 30px; color: #1e293b; }
+
+/* Botón Volver */
+.btn-top-back { 
+    background: #ffffff; border: 1px solid #e2e8f0; 
+    padding: 10px 20px; border-radius: 12px; cursor: pointer; 
+    color: #64748b; font-weight: 600; display: flex; 
+    align-items: center; gap: 8px; transition: 0.3s;
+}
+.btn-top-back:hover { border-color: #cbd5e1; color: #1e293b; background: #f1f5f9; }
+
+/* Tarjetas de Incidente (Estilo Tarjeta Elevada) */
+.card-incidente-admin {
+    background: white;
+    padding: 25px;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    border-left: 6px solid #4f46e5;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: start;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-incidente-admin:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+}
+
+.badge-asunto {
+    background: #e0e7ff; color: #4338ca;
+    padding: 4px 12px; border-radius: 20px;
+    font-size: 0.75rem; font-weight: 700; text-transform: uppercase;
+}
+
+.incidente-info h3 { margin: 12px 0; color: #1e293b; }
+.incidente-info p { color: #64748b; line-height: 1.6; margin-bottom: 15px; }
+
+.incidente-meta { color: #94a3b8; font-size: 0.8rem; display: flex; gap: 15px; }

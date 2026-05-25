@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración Global - PractiQ</title>
+    <link rel="stylesheet" href="../css/admin.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">PractiQ <span>| Administrador Global</span></a>
+        <div class="user-menu">
+            <span id="user-email">Cargando perfil...</span>
+            <button id="btn-logout" class="logout-btn"><i class='bx bx-log-out'></i> Salir</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="welcome-section">
+            <h1 class="fade-in">Centro de Mando Global</h1>
+            <p class="fade-in delay-1">Bienvenido al panel de supervisión. Aquí tienes el control total de la operación, asignaciones y métricas críticas.</p>
+        </div>
+
+        <div class="dashboard-grid">
+            <div class="card fade-in delay-7" id="card-ver-asignados" onclick="window.location.href='ver_asignados.html'">
+                <div class="card-icon" style="background: rgba(59, 130, 246, 0.1); color: #3B82F6;"><i class='bx bx-list-check'></i></div>
+                <h3>Ver Practicantes Asignados</h3>
+                <p>Audita las asignaciones, fechas y filtra por nombre o líder.</p>
+            </div>
+
+            <div class="card fade-in delay-2" id="card-stats" onclick="window.location.href='dashboard.html'">
+                <div class="card-icon" style="background: rgba(37, 99, 235, 0.1); color: #2563EB;"><i class='bx bx-stats'></i></div>
+                <h3>Dashboard Global</h3>
+                <p>Analiza el rendimiento general, horas de práctica acumuladas y KPIs de calidad.</p>
+            </div>
+
+            <div class="card fade-in delay-3" id="card-asignar-admin">
+                <div class="card-icon" style="background: rgba(16, 185, 129, 0.1); color: #10B981;"><i class='bx bx-user-plus'></i></div>
+                <h3>Asignar Practicantes</h3>
+                <p>Vincular nuevos practicantes disponibles con sus respectivos Líderes de Calidad.</p>
+            </div>
+
+            <div class="card fade-in delay-5" id="card-incidentes-global" onclick="window.location.href='ver_incidentes.html'">
+                <div class="card-icon" style="background: rgba(245, 158, 11, 0.1); color: #F59E0B;"><i class='bx bx-shield-quarter'></i></div>
+                <h3>Incidentes Reportados</h3>
+                <p>Supervisar fallas técnicas o novedades de fuerza mayor reportadas por líderes o practicantes.</p>
+            </div>
+
+            <div class="card fade-in delay-6" id="card-chat-admin" onclick="window.location.href='chat.html'">
+                <div class="card-icon" style="background: rgba(236, 72, 153, 0.1); color: #EC4899;"><i class='bx bx-message-rounded-dots'></i></div>
+                <h3>Canal de Comunicación</h3>
+                <p>Acceder a la mensajería global para soporte directo con cualquier miembro de la plataforma.</p>
+            </div>
+        </div>
+    </main>
+
+    <div id="modal-asignacion" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Gestión de Asignaciones</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Practicante</th>
+                            <th>Líder Actual</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody id="lista-asignaciones">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="../js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary: #4F46E5; 
+    --primary-hover: #4338CA;
+    --bg-color: #F3F4F6;
+    --text-dark: #1F2937;
+    --text-light: #6B7280;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+
+body {
+    display: flex; flex-direction: column; min-height: 100vh;
+    background-color: var(--bg-color); color: var(--text-dark);
+}
+
+header {
+    background: white; padding: 15px 40px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    display: flex; justify-content: space-between; align-items: center;
+}
+.logo { font-size: 24px; font-weight: 700; color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 8px;}
+.logo span { color: var(--text-dark); font-weight: 300; font-size: 16px; }
+
+footer {
+    text-align: center; padding: 20px; background: white;
+    color: var(--text-light); font-size: 14px; margin-top: auto;
+    border-top: 1px solid #E5E7EB;
+}
+
+main {
+    flex: 1; display: flex; justify-content: center; align-items: center; padding: 40px 20px;
+    background: radial-gradient(circle at top left, rgba(79, 70, 229, 0.1), transparent 40%),
+                radial-gradient(circle at bottom right, rgba(16, 185, 129, 0.05), transparent 40%);
+}
+
+.card {
+    background: white; padding: 40px; border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    width: 100%; max-width: 420px;
+    animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.card h2 { text-align: center; margin-bottom: 8px; font-weight: 600; }
+.card p.subtitle { text-align: center; color: var(--text-light); margin-bottom: 30px; font-size: 14px; }
+
+.input-group { margin-bottom: 20px; position: relative; }
+.input-group label { display: block; margin-bottom: 8px; font-size: 14px; font-weight: 500; color: var(--text-dark); }
+.input-group input {
+    width: 100%; padding: 14px 16px; border: 1px solid #D1D5DB; border-radius: 10px;
+    font-size: 15px; transition: all 0.3s ease; background: #F9FAFB;
+}
+.input-group input:focus {
+    border-color: var(--primary); background: white; outline: none;
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.15);
+}
+
+.btn {
+    width: 100%; padding: 14px; background: var(--primary); color: white;
+    border: none; border-radius: 10px; cursor: pointer; font-size: 16px;
+    font-weight: 600; transition: all 0.3s ease; margin-top: 10px;
+}
+.btn:hover { background: var(--primary-hover); transform: translateY(-2px); box-shadow: 0 10px 20px rgba(79, 70, 229, 0.2); }
+
+.links { text-align: center; margin-top: 25px; font-size: 14px; }
+.links a { color: var(--primary); text-decoration: none; font-weight: 600; transition: color 0.3s; }
+.links a:hover { color: var(--primary-hover); text-decoration: underline; }
