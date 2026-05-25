@@ -10,16 +10,29 @@ document.addEventListener('DOMContentLoaded', () => {
             const emailEl = document.getElementById('user-email');
             if (emailEl) emailEl.textContent = user.email;
         } else {
-            window.location.href = "login.html";
+            // CORREGIDO: Redirige al index.html de la raíz si no hay sesión
+            window.location.href = "../index.html";
         }
     });
 
     // 2. Cerrar Sesión
-    document.getElementById('btn-logout').addEventListener('click', () => {
-        signOut(auth).then(() => window.location.href = "login.html");
-    });
+    const btnLogout = document.getElementById('btn-logout');
+    if (btnLogout) {
+        btnLogout.addEventListener('click', () => {
+            // CORREGIDO: Redirige al index.html de la raíz tras cerrar sesión
+            signOut(auth).then(() => window.location.href = "../index.html");
+        });
+    }
 
-    // 3. Lógica del Modal de Asignación
+    // 3. Botón de Regresar (Nueva funcionalidad para volver al index raíz)
+    const btnRegresar = document.getElementById('btn-regresar'); // Asegúrate de tener este ID en tu admin.html
+    if (btnRegresar) {
+        btnRegresar.addEventListener('click', () => {
+            window.location.href = "../index.html";
+        });
+    }
+
+    // 4. Lógica del Modal de Asignación
     const modal = document.getElementById('modal-asignacion');
     const btnAsignar = document.getElementById('card-asignar-admin');
     const btnClose = document.querySelector('.close-modal');
@@ -75,12 +88,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // 4. Navegación (Se eliminan los alerts que no necesitas)
-    document.getElementById('card-stats').onclick = () => window.location.href = "dashboard.html";
-    document.getElementById('card-novedades').onclick = () => window.location.href = "novedades.html";
-    document.getElementById('card-chat-admin').onclick = () => window.location.href = "chat.html";
+    // 5. Navegación Interna (Se quedan igual porque comparten la carpeta html)
+    const cardStats = document.getElementById('card-stats');
+    if (cardStats) cardStats.onclick = () => window.location.href = "dashboard.html";
+
+    const cardNovedades = document.getElementById('card-novedades');
+    if (cardNovedades) cardNovedades.onclick = () => window.location.href = "novedades.html";
+
+    const cardChatAdmin = document.getElementById('card-chat-admin');
+    if (cardChatAdmin) cardChatAdmin.onclick = () => window.location.href = "chat.html";
     
-    // NOTA: 'card-incidentes-global' ya redirige desde el HTML, 
-    // pero si prefieres el JS, puedes quitar el onclick del HTML y poner:
-    // document.getElementById('card-incidentes-global').onclick = () => window.location.href = "ver_incidentes.html";
+    // Opcional por si usas el clic desde JS para incidentes:
+    // const cardIncidentes = document.getElementById('card-incidentes-global');
+    // if (cardIncidentes) cardIncidentes.onclick = () => window.location.href = "ver_incidentes.html";
 });

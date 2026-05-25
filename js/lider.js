@@ -14,7 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 emailElement.textContent = user.email;
             }
         } else {
-            window.location.href = "login.html";
+            // CORREGIDO: Si no está logueado, va al index de la raíz (tu login)
+            window.location.href = "../index.html";
         }
     });
 
@@ -26,7 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 btnLogout.textContent = "Saliendo...";
                 btnLogout.disabled = true;
                 await signOut(auth);
-                window.location.href = "login.html";
+                // CORREGIDO: Al salir, va al index de la raíz
+                window.location.href = "../index.html";
             } catch (error) {
                 console.error("Error al cerrar sesión:", error);
                 alert("No se pudo cerrar sesión.");
@@ -36,8 +38,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 3. Navegación centralizada
-    // He añadido 'card-sin-resolver' para que dirija a tu nueva página de gestión
+    // 3. Botón de Regresar
+    const btnRegresar = document.getElementById('btn-regresar');
+    if (btnRegresar) {
+        btnRegresar.addEventListener('click', () => {
+            window.location.href = "../index.html";
+        });
+    }
+
+    // 4. Navegación centralizada (Páginas internas)
     const navItems = [
         { id: 'card-dashboard', url: 'dashboard.html' },
         { id: 'card-asignar', url: 'asignar_tarea.html' },
@@ -56,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // 4. Inicialización de animaciones para las tarjetas
+    // 5. Animaciones
     const cards = document.querySelectorAll('.card');
     cards.forEach((card, index) => {
         card.style.animationDelay = `${index * 0.1}s`;

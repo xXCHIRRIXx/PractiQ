@@ -9,7 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const emailEl = document.getElementById('user-email');
             if (emailEl) emailEl.textContent = user.email;
         } else {
-            window.location.href = "login.html";
+            // Corregido: Sale de la carpeta para ir al index en la raíz
+            window.location.href = "../index.html";
         }
     });
 
@@ -20,7 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
             try {
                 btnLogout.textContent = "Saliendo...";
                 await signOut(auth);
-                window.location.href = "login.html";
+                // Corregido: Sale de la carpeta para ir al index en la raíz
+                window.location.href = "../index.html";
             } catch (error) {
                 console.error("Error al salir:", error);
                 btnLogout.textContent = "Salir";
@@ -28,7 +30,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 3. Navegación centralizada
+    // 3. Botón de Regresar (Nueva funcionalidad para volver al index raíz)
+    const btnRegresar = document.getElementById('btn-regresar'); // Asegúrate de que el ID en tu HTML sea 'btn-regresar'
+    if (btnRegresar) {
+        btnRegresar.addEventListener('click', () => {
+            window.location.href = "../index.html";
+        });
+    }
+
+    // 4. Navegación centralizada (Se quedan igual porque están en la misma carpeta html)
     const mapNavigation = {
         'card-tareas': 'ver_mis_tareas.html',
         'card-control': 'control.html',
