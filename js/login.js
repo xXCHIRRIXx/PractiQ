@@ -32,11 +32,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     setTimeout(() => {
                         // Redirección dinámica según rol
                         if (userData.rol === 'admin') {
-                            window.location.href = "/html/admin.html";
+                            window.location.href = "./html/admin.html";
                         } else if (userData.rol === 'lider') {
-                            window.location.href = "/html/lider.html";
+                            window.location.href = "./html/lider.html";
                         } else {
-                            window.location.href = "/html/practicante.html";
+                            window.location.href = "./html/practicante.html";
                         }
                     }, 1000);
                 } else {
