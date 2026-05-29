@@ -1,4 +1,5 @@
-import { db, auth } from './firebase-config.js';
+// Corregido: Ahora el import busca en la carpeta /js/ (en la raíz)
+import { db, auth } from '../js/firebase-config.js'; 
 import { collection, query, where, getDocs, doc, getDoc, updateDoc } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-firestore.js";
 import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-auth.js";
 
@@ -6,14 +7,15 @@ import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.13.0/f
 window.marcarCompletada = async (tareaId) => {
     try {
         await updateDoc(doc(db, "tareas", tareaId), { completada: true });
-        location.reload(); // Recarga para ver el cambio visual
+        location.reload(); 
     } catch (e) {
         alert("Error al actualizar la tarea");
     }
 };
 
 onAuthStateChanged(auth, async (user) => {
-    if (!user) return window.location.href = "login.html";
+    // Corregido: Si no hay usuario, redirigir al login en la raíz
+    if (!user) return window.location.href = "../index.html";
     
     const emailEl = document.getElementById('user-email');
     if(emailEl) emailEl.textContent = user.email;
